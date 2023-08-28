@@ -1,0 +1,19 @@
+{
+    "version": "1",
+    "inputs": [
+        {
+            "name": "prompt",
+            "description": "The prompt to feed to the model.",
+            "type": "string",
+            "required": true,
+            "default": "An astronaut riding a green horse"
+        }
+    ],
+    "output": {
+        "image": {
+            "type": "file",
+            "source": "base64",
+            "path": "output"
+        }
+    }
+}

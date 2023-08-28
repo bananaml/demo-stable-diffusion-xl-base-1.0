@@ -1,0 +1,8 @@
+potassium>=0.0.9
+torch
+transformers
+diffusers>=0.0.0
+invisible_watermark
+transformers
+accelerate
+safetensors
