@@ -6,6 +6,7 @@ WORKDIR /
 # Install git
 RUN apt-get update && apt-get install -y git
 
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # Install additional python packages
 # torch is already installed in this image
 RUN pip3 install --upgrade pip
