@@ -1,4 +1,5 @@
 from diffusers import DiffusionPipeline
+import torch
 
 MODEL = "stabilityai/stable-diffusion-xl-base-1.0"
 

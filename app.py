@@ -1,5 +1,6 @@
 from potassium import Potassium, Request, Response
 from diffusers import DiffusionPipeline
+import torch
 import base64
 from io import BytesIO
 
