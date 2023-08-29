@@ -20,7 +20,7 @@ def init():
 @app.handler("/")
 def handler(context: dict, request: Request) -> Response:
     """Handle a request to generate image from a prompt."""
-    model = context.get("model")
+    model = context.get("model").half()
     prompt = request.json.get("prompt")
     images = model(prompt=prompt).images[0]
     buffered = BytesIO()
