@@ -12,9 +12,10 @@ app = Potassium("stable-diffusion-xl-base-1.0")
 def init() -> dict:
     """Initialize the application with the model."""
     model = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
-    return {
+    context = {
         "model": model
     }
+    return context
 
 @app.handler()
 def handler(context: dict, request: Request) -> Response:

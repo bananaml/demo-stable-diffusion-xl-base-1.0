@@ -11,7 +11,7 @@
     ],
     "output": {
         "image": {
-            "type": "file",
+            "type": "image",
             "source": "base64",
             "path": "output"
         }
