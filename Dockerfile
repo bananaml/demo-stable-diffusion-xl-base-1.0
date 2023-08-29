@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # torch is already installed in this image
 RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade -r requirements.txt
 
 # Add and download your model weight files 
 # (in this case we have a python script)

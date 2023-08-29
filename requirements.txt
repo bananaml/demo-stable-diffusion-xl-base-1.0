@@ -1,7 +1,7 @@
 potassium>=0.0.9
 torch
 transformers
-diffusers --upgrade
+diffusers
 invisible_watermark
 transformers
 accelerate

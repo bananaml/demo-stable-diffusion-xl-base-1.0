@@ -11,7 +11,7 @@ app = Potassium("stable-diffusion-xl-base-1.0")
 @app.init
 def init():
     """Initialize the application with the model."""
-    model = DiffusionPipeline.from_pretrained(MODEL, torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
+    model = DiffusionPipeline.from_pretrained(MODEL, torch_dtype=torch.flioat16, use_safetensors=True, variant="fp16")
     context = {
         "model": model
     }
