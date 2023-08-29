@@ -5,7 +5,7 @@ MODEL = "stabilityai/stable-diffusion-xl-base-1.0"
 
 def download_model() -> tuple:
     """Download the model"""
-    model = DiffusionPipeline.from_pretrained(MODEL, torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
+    model = DiffusionPipeline.from_pretrained(MODEL, use_safetensors=True)
 
 
 if __name__ == "__main__":
