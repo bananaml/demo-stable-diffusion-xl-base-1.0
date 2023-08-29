@@ -22,7 +22,7 @@ def handler(context: dict, request: Request) -> Response:
     """Handle a request to generate image from a prompt."""
     model = context.get("model")
     prompt = request.json.get("prompt")
-    images = pipe(prompt=prompt).images[0]
+    images = model(prompt=prompt).images[0]
     buffered = BytesIO()
     images.save(buffered, format="JPEG", quality=80)
     img_str = base64.b64encode(buffered.getvalue())
