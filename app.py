@@ -11,7 +11,7 @@ app = Potassium("stable-diffusion-xl-base-1.0")
 @app.init
 def init():
     """Initialize the application with the model."""
-    model = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, use_safetensors=True, variant="fp16").to("cuda")
+    model = DiffusionPipeline.from_pretrained(MODEL, torch_dtype=torch.float16, use_safetensors=True, variant="fp16")
     context = {
         "model": model
     }
@@ -20,7 +20,7 @@ def init():
 @app.handler("/")
 def handler(context: dict, request: Request) -> Response:
     """Handle a request to generate image from a prompt."""
-    model = context.get("model").half()
+    model = context.get("model")
     prompt = request.json.get("prompt")
     images = model(prompt=prompt).images[0]
     buffered = BytesIO()
